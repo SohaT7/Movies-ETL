@@ -25,6 +25,12 @@ SQL
 ## Results
 An ETL function is written to read in the three data files into three DataFrames: wiki_movies_df, kaggle_metadata, and ratings.
 
+![wiki_movies_df](https://github.com/SohaT7/Movies-ETL/blob/main/Images/wiki_movies_df.png)
+
+![kaggle_metadata](https://github.com/SohaT7/Movies-ETL/blob/main/Images/kaggle_metadata.png)
+
+![ratings](https://github.com/SohaT7/Movies-ETL/blob/main/Images/ratings.png)
+
 The Wikipedia data then undergoes the processes of extraction and transformation. All TV shows are filtered out, extracted, and the cleaned data type was then converted to a DataFrame. 
 
 Next, the Kaggle metadata is cleaned and converted into a DataFrame. This is followed by the Wikipedia movies DataFrame and the Kaggle metadata DataFrame being merged into a 'movies' DataFrame.
