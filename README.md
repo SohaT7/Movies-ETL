@@ -8,6 +8,7 @@
 - [Results](#results)
     - [Reading in the three files](#Reading-in-the-three-files)
     - [Cleaning the Wikipedia Data](#Cleaning-the-Wikipedia-Data)
+    - [Cleaning the Kaggle Data](#Cleaning-the-Kaggle-Data)
     - [Creating the Movie Database](#Creating-the-Movie-Database)
 - [Summary](#summary)
 - [Contact Information](#contact-information)
