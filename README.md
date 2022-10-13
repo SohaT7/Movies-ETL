@@ -62,7 +62,7 @@ The Kaggle movies metadata is cleaned and transformed as such:
  
  The two DataFrames wiki_movies_df and kaggle_metadata are then merged into a new DataFrame movies_df. Unnecessary columns () are dropped from it. Missing values are filled in by passing in the DataFrame, Kaggle column, and the Wiki column into the fill_missing_kaggle_data() function. The DataFrame movies_df is then filtered to keep only specific columns and these are then renamed for consistency purposes. 
 
-The resultant movies DataFrame can be seen below:
+The resultant movies_df DataFrame can be seen below:
 
 ![movies_df](https://github.com/SohaT7/Movies-ETL/blob/main/Images/movies_df.png)
 
