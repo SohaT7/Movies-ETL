@@ -16,7 +16,7 @@
 
 ## Overview of the Analysis
 ### Purpose:
-The purpose of this project is to create an automated ETL (Extract, Transform, Load) pipeline that takes in data on movies and movie ratings from two sources (and three different files), transforms that data, and then loads it into a SQL database. 
+The purpose of this project is to create an automated ETL (Extract, Transform, Load) pipeline that takes in data on movies and movie ratings from two sources (and three different files), transforms that data, and then loads it into a SQL movies database. 
 
 ### About the Dataset:
 The dataset comprises of the following three data files:
@@ -37,7 +37,7 @@ The three data files - Wikipedia data, Kaggle movies metadata, and MovieLens rat
 [ETL_create_database](https://github.com/SohaT7/Movies-ETL/blob/main/ETL_create_database.ipynb) is the file that contains the entire code for this project. However, if the reader would like to view the code written as a process, they can view the following files in the order given below:
  - [ETL_clean_wiki_movies](https://github.com/SohaT7/Movies-ETL/blob/main/ETL_clean_wiki_movies.ipynb) - contains code that cleans the Wikipedia data only
  - [ETL_clean_kaggle_data](https://github.com/SohaT7/Movies-ETL/blob/main/ETL_clean_kaggle_data.ipynb) - contains code that cleans the Kaggle data, and creates the movies_df and movies_with_ratings_df DataFrames
- - [ETL_create_database](https://github.com/SohaT7/Movies-ETL/blob/main/ETL_create_database.ipynb) - contains code that connects with the movie database created in PostgreSQL
+ - [ETL_create_database](https://github.com/SohaT7/Movies-ETL/blob/main/ETL_create_database.ipynb) - contains code that connects with the movies database created in PostgreSQL
 
 A query run on the tables in the PostgreSQL database returns the number of rows for [the movies](https://github.com/SohaT7/Movies-ETL/blob/main/Images/movies_query.png) and [the ratings](https://github.com/SohaT7/Movies-ETL/blob/main/Images/ratings_query.png) tables.
 
@@ -48,7 +48,7 @@ At the end, the wiki_movies_df, movies_with_ratings_df, and the movies_df are th
 A function (named as clean_movie) is written which takes in the argument 'movie' and cleans it. The main function (named as extract_transform_load()) is written which takes in the three data files as arguments and passes them into three DataFrames: wiki_movies_raw, kaggle_metadata, and ratings. The Wikipedia data (in the wiki_movies_raw DataFrame) is then cleaned by filtering out TV shows and passing the data through the clean_movie() function created earlier. This cleaned data is stored in the wiki_movies_df DataFrame, and then transformed as such:
  -  IMDb IDs are extracted by writing a 'regex' (regular expression) and dropping the duplicate IDs. A try-except block catches any errors during this process.
  - Columns with atleast 90% non-null values are kept.
- - The columns 'Box office', 'Budget', 'Release dat', and 'Running time' are cleaned and transformed as need be.
+ - The columns 'Box office', 'Budget', 'Release date', and 'Running time' are cleaned and transformed as need be.
 
  The resultant cleaned and transformed Wikipedia data is can be seen in the wiki_movies_df DataFrame below:
 
