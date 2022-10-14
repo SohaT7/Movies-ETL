@@ -50,7 +50,7 @@ A function (named as clean_movie) is written which takes in the argument 'movie'
  - Columns with atleast 90% non-null values are kept.
  - The columns 'Box office', 'Budget', 'Release date', and 'Running time' are cleaned and transformed as need be.
 
- The resultant cleaned and transformed Wikipedia data is can be seen in the wiki_movies_df DataFrame below:
+ The resultant cleaned and transformed Wikipedia data can be seen in the wiki_movies_df DataFrame below:
 
 ![wiki_movies_df](https://github.com/SohaT7/Movies-ETL/blob/main/Images/wiki_movies_df.png)
 
