@@ -54,7 +54,15 @@ A function (named as clean_movie) is written which takes in the argument 'movie'
 
 ![wiki_movies_df](https://github.com/SohaT7/Movies-ETL/blob/main/Images/wiki_movies_df.png)
 
+The columns in the wiki_movies_df DataFrame are given below:
+
+![wiki_movies_df columns](https://github.com/SohaT7/Movies-ETL/blob/main/Images/c_wiki_movies_df.png)
+
 ### Extraction and Transformation of the Kaggle Metadata:
+The kaggle_metadata DataFrame has the following columns:
+
+![kaggle_metadata columns](https://github.com/SohaT7/Movies-ETL/blob/main/Images/c_kaggle_metadata.png)
+
 The Kaggle movies metadata is cleaned and transformed as such:
  - 'Adult' movies are dropped.
  - Only the 'video' type is kept.
@@ -66,15 +74,25 @@ The resultant movies_df DataFrame can be seen below:
 
 ![movies_df](https://github.com/SohaT7/Movies-ETL/blob/main/Images/movies_df.png)
 
+The movies_df DataFrame has the following columns:
+
+![movies_df columns](https://github.com/SohaT7/Movies-ETL/blob/main/Images/c_movies_df.png)
+
 ### Extraction and Transformation of the MovieLens Ratings Data:
+The ratings DataFrame has the following columns in it:
+
+![ratings columns](https://github.com/SohaT7/Movies-ETL/blob/main/Images/c_ratings.png)
+
 The ratings DataFrame is cleaned and transformed as such:
  - Ratings counts are cleaned.
  - The movies_df and the cleaned ratings DataFrame are merged into a new movies_with_ratings_df DataFrame, containing movies and their respective ratings.
  - The empty values in the movies_with_ratings_df DataFrame are filled in with a "0".
 
- The movies_with_ratings_df DataFrame is shown below:
+ The movies_with_ratings_df DataFrame and its columns are shown below:
 
  ![movies_with_ratings_df](https://github.com/SohaT7/Movies-ETL/blob/main/Images/movies_with_ratings_df.png)
+
+![movies_with_ratings_df columns](https://github.com/SohaT7/Movies-ETL/blob/main/Images/c_movies_with_ratings_df.png)
 
 ### Loading the Data into the Movie Database:
 A connection is created to the PostgreSQL database 'movie_data'. The movies_df and the ratings DataFrames are then imported into this database.
